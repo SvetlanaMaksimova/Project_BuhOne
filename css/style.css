@@ -133,3 +133,139 @@ h6 {
   font-weight: 900;
   font-style: normal;
 }
+
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.header__container {
+  max-width: 1116px;
+  min-height: 110px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header__logo {
+  display: inline-block;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__menu {
+  width: 671px;
+  font-family: Lato;
+}
+
+.logo {
+  margin: 22px 0 0 0;
+}
+
+.logo__logo {
+  margin: 0 30px 0 0;
+}
+
+.logo__text {
+  display: inline-block;
+}
+
+.logo__text a {
+  font-family: Merriweather;
+  font-size: 36px;
+  color: #005fa3;
+  font-weight: 700;
+}
+
+.menu__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.menu__burger {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .menu__burger {
+    display: block;
+  }
+}
+
+.menu__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.menu__link {
+  letter-spacing: 0.1em;
+  line-height: 17px;
+  font-family: "Lato";
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #222222;
+}
+
+.info {
+  margin: 22px 0 25px 0;
+  text-align: center;
+  font-family: "Lato";
+  font-weight: 400;
+  color: #222222;
+  font-size: 13px;
+  line-height: 17px;
+}
+
+.info__phone {
+  display: inline-block;
+  text-align: center;
+  padding: 0 0 0 25px;
+  min-height: 100%;
+  background: url("../img/phone.svg") left no-repeat;
+}
+
+.info__clock {
+  display: inline-block;
+  min-height: 100%;
+  padding: 0 0 0 33px;
+  background: url("../img/clock.svg") 0 1px no-repeat;
+}
+
+.info__mail {
+  display: inline-block;
+  padding: 1px 0 2px 35px;
+  background: url("../img/mail.svg") left no-repeat;
+}
+
+.info__address {
+  display: inline-block;
+  padding: 1px 0 2px 35px;
+  background: url("../img/placeholder.svg") left no-repeat;
+}
+
+.link {
+  color: #000;
+  text-align: center;
+}
