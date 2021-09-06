@@ -147,14 +147,17 @@ h6 {
           flex-direction: column;
 }
 
+.container {
+  max-width: 1116px;
+  margin: 0 auto;
+}
+
 .header {
   margin: 22px 0 30px 0;
 }
 
 .header__container {
-  max-width: 1116px;
-  min-height: 57px;
-  margin: 0 auto;
+  max-height: 57px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -179,14 +182,18 @@ h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  padding: 11px 0 0 0;
 }
 
 .header__menu {
   width: 671px;
   font-family: Lato;
+}
+
+@media (max-width: 775px) {
+  .header__menu {
+    position: relative;
+  }
 }
 
 .logo__logo {
@@ -208,6 +215,12 @@ h6 {
   font-size: 36px;
   color: #005fa3;
   font-weight: 700;
+}
+
+@media (max-width: 1120px) {
+  .logo__text {
+    margin: 0 10px 0 0;
+  }
 }
 
 .menu__info {
@@ -238,15 +251,13 @@ h6 {
   .menu__body {
     display: block;
     position: fixed;
-    top: 10%;
-    left: 70%;
-    background-color: #005fa3b4;
+    top: 0;
+    left: 0;
+    background-color: #005fa3c2;
     padding: 0px 35px;
     max-height: 0px;
     font-size: 0px;
     overflow: hidden;
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
   }
 }
 
@@ -261,19 +272,27 @@ h6 {
 }
 
 .menu__link:hover {
-  text-decoration: underline;
+  font-size: 18px;
+  font-weight: 900;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 @media (max-width: 775px) {
   .menu__link {
     display: block;
-    margin: 25px 0;
-    font-size: 18px;
-    color: #fff;
+    margin: 50px 0;
+    font-size: 20px;
+    color: white;
     text-decoration: none;
+    -webkit-transition: all 0.5s ease 0.25s;
+    transition: all 0.5s ease 0.25s;
   }
   .menu__link:hover {
-    text-decoration: underline;
+    font-size: 18px;
+    font-weight: 900;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
   }
 }
 
@@ -323,11 +342,16 @@ h6 {
 
 #burger-menu {
   display: none;
+  z-index: 9;
 }
 
 #burger-menu:checked ~ .menu__body {
-  min-height: 240px;
+  min-height: 100%;
   z-index: 5;
+  min-width: 100%;
+  text-align: center;
+  -webkit-transition: all 0.5s ease 0.25s;
+  transition: all 0.5s ease 0.25s;
 }
 
 #burger-menu:checked ~ .first {
@@ -337,11 +361,13 @@ h6 {
 #burger-menu:checked ~ .second {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+  background-color: #ffffff;
 }
 
 #burger-menu:checked ~ .third {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
+  background-color: #ffffff;
 }
 
 #burger-menu:checked ~ .fourth {
@@ -358,6 +384,7 @@ h6 {
 
 @media (max-width: 775px) {
   .burger__line {
+    z-index: 6;
     display: block;
     position: relative;
     top: -60%;
@@ -365,13 +392,13 @@ h6 {
     width: 40px;
     height: 3px;
     background-color: #005fa3;
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
   }
 }
 
 .second {
-  top: -45%;
+  top: -44%;
 }
 
 .third {
@@ -395,6 +422,134 @@ label {
     width: 50px;
     height: 50px;
     cursor: pointer;
-    z-index: 2;
+    z-index: 9;
   }
+}
+
+.main__slider {
+  padding: 179px 0 0 0;
+  min-height: 670px;
+  position: relative;
+}
+
+.main__slider input {
+  display: none;
+}
+
+.main__container {
+  background-color: #ebebeb;
+}
+
+.main__our-services {
+  max-width: 1116px;
+  margin: 0 auto;
+  padding: 0 0 140px 0;
+}
+
+.slider__container {
+  max-height: 670px;
+  background: url("/img/slides/Rectangle.png") 0 0/cover no-repeat scroll;
+}
+
+.slider__slide {
+  display: block;
+}
+
+.slider__text {
+  max-width: 589px;
+  font-family: Merriweather;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 66px;
+  color: #ffffff;
+}
+
+.slide-item {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  opacity: 0;
+  display: block;
+  position: relative;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
+}
+
+.slide-item button {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  color: #ffffff;
+  background-color: #005fa3;
+}
+
+.our-services__title {
+  padding: 147px 0 0 0;
+}
+
+.our-services__subtitle {
+  padding: 50px 0 70px 0;
+}
+
+.title {
+  font-family: "Lato";
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 33.12px;
+  color: #bdbdbd;
+}
+
+.subtitle {
+  font-family: Merriweather;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 69px;
+  color: #333333;
+}
+
+.items__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.item {
+  margin: 15px 0;
+  width: 350px;
+  height: 360px;
+  background: url(/img/city_item.png) no-repeat;
+  -webkit-transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+  transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+}
+
+.item:hover {
+  background: url(/img/city_blue.png) no-repeat;
+}
+
+.item__text {
+  position: relative;
+  top: 70%;
+  left: 10%;
+  max-width: 187px;
+}
+
+.item__text a {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 30px;
+  color: #ffffff;
 }

@@ -70,12 +70,16 @@
     display: flex;
     flex-direction: column;
 }
+.container {
+    max-width: 1116px;
+
+    margin: 0 auto;
+}
+
 .header {
     margin: 22px 0 30px 0;
     &__container {
-        max-width: 1116px;
-        min-height: 57px;
-        margin: 0 auto;
+        max-height: 57px;
         display: flex;
         justify-content: space-between;
         @media (max-width: 1120px) {
@@ -88,12 +92,15 @@
 
     &__logo {
         display: flex;
-        align-items: center;
+        padding: 11px 0 0 0;
     }
 
     &__menu {
         width: 671px;
         font-family: Lato;
+        @media (max-width: 775px) {
+            position: relative;
+        }
     }
 }
 .logo {
@@ -112,6 +119,9 @@
             color: #005fa3;
             font-weight: 700;
         }
+        @media (max-width: 1120px) {
+            margin: 0 10px 0 0;
+        }
     }
 }
 .menu {
@@ -123,20 +133,21 @@
         }
     }
 
+    //TODO: Хочется сделать плавный переход, но из-за смены display не получается
+
     &__body {
         display: flex;
         justify-content: space-between;
         @media (max-width: 775px) {
             display: block;
             position: fixed;
-            top: 10%;
-            left: 70%;
-            background-color: #005fa3b4;
+            top: 0;
+            left: 0;
+            background-color: #005fa3c2;
             padding: 0px 35px;
             max-height: 0px;
             font-size: 0px;
             overflow: hidden;
-            transition: all 0.5s;
         }
     }
 
@@ -149,17 +160,22 @@
         text-transform: uppercase;
         color: #222222;
         &:hover {
-            text-decoration: underline;
+            font-size: 18px;
+            font-weight: 900;
+            transition: all 0.5s ease;
         }
 
         @media (max-width: 775px) {
             display: block;
-            margin: 25px 0;
-            font-size: 18px;
-            color: #fff;
+            margin: 50px 0;
+            font-size: 20px;
+            color: white;
             text-decoration: none;
+            transition: all 0.5s ease 0.25s;
             &:hover {
-                text-decoration: underline;
+                font-size: 18px;
+                font-weight: 900;
+                transition: all 0.5s ease;
             }
         }
     }
@@ -204,18 +220,24 @@
 }
 #burger-menu {
     display: none;
+    z-index: 9;
     &:checked ~ .menu__body {
-        min-height: 240px;
+        min-height: 100%;
         z-index: 5;
+        min-width: 100%;
+        text-align: center;
+        transition: all 0.5s ease 0.25s;
     }
     &:checked ~ .first {
         display: none;
     }
     &:checked ~ .second {
         transform: rotate(45deg);
+        background-color: #ffffff;
     }
     &:checked ~ .third {
         transform: rotate(-45deg);
+        background-color: #ffffff;
     }
     &:checked ~ .fourth {
         display: none;
@@ -227,6 +249,7 @@
     &__line {
         display: none;
         @media (max-width: 775px) {
+            z-index: 6;
             display: block;
             position: relative;
             top: -60%;
@@ -236,12 +259,12 @@
             width: 40px;
             height: 3px;
             background-color: #005fa3;
-            transition: all 0.5s;
+            transition: all 0.5s ease;
         }
     }
 }
 .second {
-    top: -45%;
+    top: -44%;
 }
 .third {
     top: -50%;
@@ -260,6 +283,137 @@ label {
         width: 50px;
         height: 50px;
         cursor: pointer;
-        z-index: 2;
+        z-index: 9;
+    }
+}
+
+.main {
+    &__slider {
+        padding: 179px 0 0 0;
+        min-height: 670px;
+        position: relative;
+        & input {
+            display: none;
+        }
+    }
+
+    &__container {
+        background-color: #ebebeb;
+    }
+
+    &__our-services {
+        max-width: 1116px;
+        margin: 0 auto;
+        padding: 0 0 140px 0;
+    }
+}
+.slider {
+    &__container {
+        max-height: 670px;
+        background: url("/img/slides/Rectangle.png") 0 0 / cover no-repeat scroll;
+    }
+
+    &__slide {
+        display: block;
+    }
+
+    &__text {
+        max-width: 589px;
+        font-family: Merriweather;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 48px;
+        line-height: 66px;
+        color: #ffffff;
+    }
+
+    &__dots {
+    }
+
+    &__dot {
+    }
+}
+.slide-item {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    opacity: 0;
+    display: block;
+    position: relative;
+    transform: scale(0);
+    transition: all 0.7s ease-in-out;
+    & button {
+        font-family: Lato;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 25px;
+        text-align: center;
+        color: #ffffff;
+        background-color: #005fa3;
+    }
+}
+.slide-arrow {
+}
+.arrow-prev {
+}
+.arrow-next {
+}
+.our-services {
+    &__title {
+        padding: 147px 0 0 0;
+    }
+
+    &__subtitle {
+        padding: 50px 0 70px 0;
+    }
+
+    &__items {
+    }
+}
+.title {
+    font-family: "Lato";
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 33.12px;
+    color: #bdbdbd;
+}
+.subtitle {
+    font-family: Merriweather;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 69px;
+    color: #333333;
+}
+.items {
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}
+.item {
+    margin: 15px 0;
+    width: 350px;
+    height: 360px;
+    background: url(/img/city_item.png) no-repeat;
+    transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+    &:hover {
+        background: url(/img/city_blue.png) no-repeat;
+    }
+    &__text {
+        position: relative;
+        top: 70%;
+        left: 10%;
+        max-width: 187px;
+        & a {
+            font-family: Lato;
+            font-style: normal;
+            font-weight: 900;
+            font-size: 24px;
+            line-height: 30px;
+            color: #ffffff;
+        }
     }
 }

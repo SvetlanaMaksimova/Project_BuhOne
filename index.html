@@ -13,7 +13,7 @@
 <body>
     <div class="wrapper">
         <header class="header">
-            <div class="header__container">
+            <div class="header__container container">
                 <div class="header__logo logo">
                     <a href="#" class="logo__logo"><img src="../img/logo.svg" alt="Логотип"></a>
                     <div class="logo__text">
@@ -50,28 +50,64 @@
             </div>
         </header>
         <div class="main">
-            <div class="main__first-slider">
-                <div class="slider">
-                    <div class="slider__item">
-                        <h1>Бухгалтерские услуги в Санкт-Петербурге</h1>
-                        <button type="button">Наша презентация</button>
-                    </div>
-                    <div class="slider__item">
-                        <span>Бухгалтерские услуги в Санкт-Петербурге</span>
-                        <button class="button" type="button">Наша презентация</button>
-                    </div>
-                    <div class="slider__item">
-                        <span>Бухгалтерские услуги в Санкт-Петербурге</span>
-                        <button type="button">Наша презентация</button>
-                    </div>
-                    <div class="slider__item">
-                        <span>Бухгалтерские услуги в Санкт-Петербурге</span>
-                        <button type="button">Наша презентация</button>
-                    </div>
+            <div class="slider__container">
+                <div class="container">
+                    <ul class="main__slider slider">
+                        <input type="radio" name="slider-btn" id="slide-1">
+                        <li class="slider__slide">
+                            <div class="slide-item">
+                                <h1 class="slider__text">Бухгалтерские услуги в Санкт-Петербурге</h1>
+                                <button type="button">Наша презентация</button>
+                            </div>
+                            <div class="slide-arrow">
+                                <label for="slide-4" class="arrow-prev">&#x2039;</label>
+                                <label for="slide-2" class="arrow-next">&#x203a;</label>
+                            </div>
+                        </li>
+                        <input type="radio" name="slider-btn" id="slide-2">
+                        <li class="slider__slide">
+                            <div class="slide-item">
+                                <span class="slider__text">Бухгалтерские услуги в Санкт-Петербурге</span>
+                                <button type="button">Наша презентация</button>
+                            </div>
+                            <div class="slide-arrow">
+                                <label for="slide-1" class="arrow-prev">&#x2039;</label>
+                                <label for="slide-3" class="arrow-next">&#x203a;</label>
+                            </div>
+                        </li>
+                        <input type="radio" name="slider-btn" id="slide-3">
+                        <li class="slider__slide">
+                            <div class="slide-item">
+                                <span class="slider__text">Бухгалтерские услуги в Санкт-Петербурге</span>
+                                <button type="button">Наша презентация</button>
+                            </div>
+                            <div class="slide-arrow">
+                                <label for="slide-2" class="arrow-prev">&#x2039;</label>
+                                <label for="slide-4" class="arrow-next">&#x203a;</label>
+                            </div>
+                        </li>
+                        <input type="radio" name="slider-btn" id="slide-4">
+                        <li class="slider__slide">
+                            <div class="slide-item">
+                                <span class="slider__text">Бухгалтерские услуги в Санкт-Петербурге</span>
+                                <button type="button">Наша презентация</button>
+                            </div>
+                            <div class="slide-arrow">
+                                <label for="slide-1" class="arrow-prev">&#x2039;</label>
+                                <label for="slide-3" class="arrow-next">&#x203a;</label>
+                            </div>
+                        </li>
+                        <li class="slider__dots">
+                            <label for="slide-1" class="slider__dot" id="dot-1"></label>
+                            <label for="slide-2" class="slider__dot" id="dot-2"></label>
+                            <label for="slide-3" class="slider__dot" id="dot-3"></label>
+                            <label for="slide-4" class="slider__dot" id="dot-4"></label>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <div class="main__container">
-                <div class="main__our-services">
+                <div class="main__our-services container">
                     <div class="our-services__title title">
                         <h2>Наши услуги</h2>
                     </div>
