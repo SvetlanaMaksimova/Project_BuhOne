@@ -72,7 +72,6 @@
 }
 .container {
     max-width: 1116px;
-
     margin: 0 auto;
 }
 
@@ -159,10 +158,10 @@
         font-weight: 700;
         text-transform: uppercase;
         color: #222222;
+        transition: all 0.5s ease;
         &:hover {
             font-size: 18px;
             font-weight: 900;
-            transition: all 0.5s ease;
         }
 
         @media (max-width: 775px) {
@@ -171,11 +170,9 @@
             font-size: 20px;
             color: white;
             text-decoration: none;
-            transition: all 0.5s ease 0.25s;
             &:hover {
                 font-size: 18px;
                 font-weight: 900;
-                transition: all 0.5s ease;
             }
         }
     }
@@ -289,9 +286,8 @@ label {
 
 .main {
     &__slider {
-        padding: 179px 0 0 0;
         min-height: 670px;
-        position: relative;
+        padding: 179px 0 0 0;
         & input {
             display: none;
         }
@@ -299,18 +295,24 @@ label {
 
     &__container {
         background-color: #ebebeb;
+        max-height: 1242px;
     }
 
     &__our-services {
         max-width: 1116px;
+        max-height: 1242px;
         margin: 0 auto;
         padding: 0 0 140px 0;
     }
 }
+
 .slider {
     &__container {
-        max-height: 670px;
+        min-height: 670px;
         background: url("/img/slides/Rectangle.png") 0 0 / cover no-repeat scroll;
+        @media (max-width: 1120px) {
+            padding: 0 15px;
+        }
     }
 
     &__slide {
@@ -325,24 +327,53 @@ label {
         font-size: 48px;
         line-height: 66px;
         color: #ffffff;
+        top: 0;
+        width: 589px;
+        padding: 0 0 56px 0;
+        display: block;
     }
 
     &__dots {
+        height: 10px;
+        display: inline-block;
+        text-align: left;
+        position: absolute;
+        top: 650px;
+        & :first-child {
+            margin: 0 15px 0 1px;
+        }
     }
 
     &__dot {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        margin: 0 15px;
+        border-radius: 100%;
+        background-color: rgba(255, 255, 255, 0.6);
+        &:hover {
+            cursor: pointer;
+            background-color: white;
+        }
     }
 }
+
+//!Не нравится анимация, на последнем слайде перепрыг. Если менять дисплей, то нет анимации
+
 .slide-item {
-    width: 100%;
-    height: 100%;
+    width: 0;
+    height: 0;
     top: 0;
-    opacity: 0;
-    display: block;
-    position: relative;
+    opacity: 1;
+    //display: none;
     transform: scale(0);
-    transition: all 0.7s ease-in-out;
+    transition: all 0.7s ease;
+    & h1,
+    span {
+    }
     & button {
+        width: 270px;
+        height: 60px;
         font-family: Lato;
         font-style: normal;
         font-weight: normal;
@@ -354,18 +385,55 @@ label {
     }
 }
 .slide-arrow {
+    & label {
+        position: relative;
+        padding: 20px 0 0 0;
+        left: 89%;
+        display: none;
+        width: 60px;
+        height: 60px;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.2);
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.4);
+        }
+        &:active {
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+    }
 }
 .arrow-prev {
 }
 .arrow-next {
 }
+
+input#slide-1:checked ~ .slider__dots label#dot-1,
+input#slide-2:checked ~ .slider__dots label#dot-2,
+input#slide-3:checked ~ .slider__dots label#dot-3,
+input#slide-4:checked ~ .slider__dots label#dot-4 {
+    background: white;
+}
+
+input:checked + .slider__slide .slide-arrow label {
+    display: inline-block;
+}
+
+input:checked + .slider__slide .slide-item {
+    max-width: 670px;
+    min-height: 318px;
+    opacity: 1;
+    display: block;
+    transform: scale(1);
+    transition: all 0.5s ease;
+}
+
 .our-services {
     &__title {
         padding: 147px 0 0 0;
     }
 
     &__subtitle {
-        padding: 50px 0 70px 0;
+        padding: 42px 0 70px 0;
     }
 
     &__items {
@@ -385,16 +453,21 @@ label {
     font-size: 48px;
     line-height: 69px;
     color: #333333;
+    & span {
+        color: #005fa3;
+    }
 }
 .items {
     &__item {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+        & :nth-child(-n + 3) {
+            margin: 0 0 30px 0;
+        }
     }
 }
 .item {
-    margin: 15px 0;
     width: 350px;
     height: 360px;
     background: url(/img/city_item.png) no-repeat;
@@ -415,5 +488,80 @@ label {
             line-height: 30px;
             color: #ffffff;
         }
+    }
+}
+
+.main {
+    &__about-us {
+    }
+}
+.about-us {
+    display: flex;
+    justify-content: space-between;
+    padding: 146px 0 140px 0;
+    &__text {
+        max-width: 445px;
+    }
+
+    &__cases {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 540px;
+        & :nth-child(-n + 2) {
+            margin: 0 0 30px 0;
+        }
+    }
+
+    &__case {
+        width: 255px;
+        height: 255px;
+        background: #ebebeb;
+        text-align: left;
+        padding: 30px 0 0 40px;
+    }
+    &__title {
+        margin: 0 0 45px 0;
+    }
+    &__subtitle {
+        margin: 0 0 60px 0;
+    }
+}
+
+.text {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 25px;
+}
+.case-title {
+    margin: 0 0 30px 0;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 55px;
+    line-height: 66px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+.case-text {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+    width: 107px;
+    margin: 0 0 47px 0;
+}
+.case-link {
+    & a {
+        font-family: Lato;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 17px;
+        text-decoration-line: underline;
+        color: #005fa3;
     }
 }
