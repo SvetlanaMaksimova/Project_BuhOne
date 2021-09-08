@@ -443,6 +443,10 @@ label {
   padding: 0 0 140px 0;
 }
 
+.main__our-clients {
+  background: #ebebeb;
+}
+
 .slider__container {
   min-height: 670px;
   background: url("/img/slides/Rectangle.png") 0 0/cover no-repeat scroll;
@@ -650,6 +654,7 @@ input:checked + .slider__slide .slide-item {
 }
 
 .about-us__cases {
+  margin: 24px 0 0 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -671,6 +676,15 @@ input:checked + .slider__slide .slide-item {
   background: #ebebeb;
   text-align: left;
   padding: 30px 0 0 40px;
+}
+
+.about-us__case:hover {
+  background: #005fa3;
+  color: #ffffff;
+}
+
+.about-us__case:hover a {
+  color: #ffffff;
 }
 
 .about-us__title {
@@ -719,4 +733,60 @@ input:checked + .slider__slide .slide-item {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
   color: #005fa3;
+}
+
+.our-clients {
+  padding: 100px 0;
+}
+
+.our-clients__title {
+  margin: 0 0 40px 0;
+}
+
+.our-clients__subtitle {
+  margin: 0 0 80px 0;
+}
+
+.our-clients__slider {
+  display: block;
+}
+
+.slider input {
+  display: none;
+}
+
+.our-clients-slide {
+  display: inline-block;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+}
+
+.our-clients-img {
+  display: inline-block;
+}
+
+.our-clients-img:first-child {
+  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+input#btn-1:checked ~ .slider__dots label#img-1,
+input#btn-2:checked ~ .slider__dots label#img-2,
+input#btn-3:checked ~ .slider__dots label#img-3,
+input#btn-4:checked ~ .slider__dots label#img-4 {
+  background: #005fa3;
+}
+
+input:checked + .our-clients-slide .slide-arrow label {
+  display: inline-block;
+}
+
+input:checked + .our-clients-slide .our-clients-img {
+  max-width: 670px;
+  min-height: 318px;
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
