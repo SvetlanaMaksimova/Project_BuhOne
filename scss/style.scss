@@ -300,6 +300,9 @@ label {
     &__our-clients {
         background: #ebebeb;
     }
+
+    &__reviews {
+    }
 }
 
 .first-slider {
@@ -697,6 +700,160 @@ input#btn-4:checked ~ .arrow-next .arrow-4 {
     transform: translateX(-200%);
 }
 #btn-4:checked ~ .our-clients__slides {
+    -webkit-transform: translateX(-300%);
+    transform: translateX(-300%);
+}
+.reviews {
+    overflow: hidden;
+    padding: 140px 0;
+    &__title {
+        margin-bottom: 40px;
+    }
+
+    &__subtitle {
+        margin-bottom: 80px;
+    }
+
+    &__slaider {
+        & input {
+            display: none;
+        }
+    }
+
+    &__slides {
+        margin-bottom: 50px;
+        display: flex;
+        transition: all 0.5s;
+    }
+    &__slide {
+        background-color: #ebebeb;
+        min-width: 1110px;
+        padding: 45px 95px;
+    }
+}
+
+.info-client {
+    margin-top: 58px;
+    display: flex;
+    &__photo {
+        display: inline-block;
+    }
+
+    &__client {
+        display: inline-block;
+        padding: 17px 35px;
+    }
+
+    &__name-client {
+        font-family: Lato;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    &__company-client {
+        font-family: Lato;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 19px;
+        color: #4f4f4f;
+    }
+}
+
+.rewiew-dots-blue {
+    display: inline-block;
+}
+.rewiew-dot-blue {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: rgba(0, 95, 163, 0.4);
+    display: inline-block;
+    margin-right: 40px;
+    &:hover {
+        cursor: pointer;
+        background-color: #005fa3;
+    }
+}
+.rewiew-arrow-prev {
+    position: relative;
+    left: 69.5%;
+    display: inline-block;
+    background-color: rgba(0, 95, 163, 0.2);
+    margin-right: -3px;
+    & label {
+        width: 60px;
+        height: 60px;
+        z-index: 0;
+        display: none;
+        position: relative;
+        & img {
+            position: absolute;
+            top: 50%;
+            left: 45%;
+            transform: translate(0, -50%);
+        }
+    }
+    &:hover {
+        background-color: #005fa3;
+    }
+}
+.rewiew-arrow-next {
+    position: relative;
+    left: 69.5%;
+    display: inline-block;
+    background-color: rgba(0, 95, 163, 0.2);
+    & label {
+        width: 60px;
+        height: 60px;
+        z-index: 0;
+        display: none;
+        position: relative;
+        & img {
+            position: absolute;
+            top: 50%;
+            left: 45%;
+            transform: translate(0, -50%);
+        }
+    }
+    &:hover {
+        background-color: #005fa3;
+    }
+}
+
+input#rew-inp-1:checked ~ .rewiew-dots-blue label#rewiew-1,
+input#rew-inp-2:checked ~ .rewiew-dots-blue label#rewiew-2,
+input#rew-inp-3:checked ~ .rewiew-dots-blue label#rewiew-3,
+input#rew-inp-4:checked ~ .rewiew-dots-blue label#rewiew-4 {
+    background-color: #005fa3;
+}
+input#rew-inp-1:checked ~ .rewiew-arrow-prev .arrow-1,
+input#rew-inp-1:checked ~ .rewiew-arrow-next .arrow-1,
+input#rew-inp-2:checked ~ .rewiew-arrow-prev .arrow-2,
+input#rew-inp-3:checked ~ .rewiew-arrow-prev .arrow-3,
+input#rew-inp-2:checked ~ .rewiew-arrow-next .arrow-2,
+input#rew-inp-3:checked ~ .rewiew-arrow-next .arrow-3,
+input#rew-inp-4:checked ~ .rewiew-arrow-prev .arrow-4,
+input#rew-inp-4:checked ~ .rewiew-arrow-next .arrow-4 {
+    display: block;
+    z-index: 1;
+}
+
+#rew-inp-1:checked ~ .reviews__slides {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+}
+#rew-inp-2:checked ~ .reviews__slides {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+}
+#rew-inp-3:checked ~ .reviews__slides {
+    -webkit-transform: translateX(-200%);
+    transform: translateX(-200%);
+}
+#rew-inp-4:checked ~ .reviews__slides {
     -webkit-transform: translateX(-300%);
     transform: translateX(-300%);
 }
