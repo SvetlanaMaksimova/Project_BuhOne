@@ -260,6 +260,19 @@
             transition: all 0.5s ease;
         }
     }
+    &__label {
+        display: none;
+        @media (max-width: 880px) {
+            display: block;
+            position: relative;
+            top: 8%;
+            left: 80%;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            z-index: 9;
+        }
+    }
 }
 .second {
     top: -44%;
@@ -269,20 +282,6 @@
 }
 .fourth {
     top: -35%;
-}
-
-label {
-    display: none;
-    @media (max-width: 880px) {
-        display: block;
-        position: relative;
-        top: 8%;
-        left: 80%;
-        width: 50px;
-        height: 50px;
-        cursor: pointer;
-        z-index: 9;
-    }
 }
 
 .main {
@@ -310,17 +309,16 @@ label {
     }
 }
 
-//TODO:Как анимировать гриды?
+//!Как анимировать гриды?
 
 .first-slider {
     &__slider {
         padding: 179px 0 110px 0;
         overflow: hidden;
-        //position: relative;
         display: grid;
         grid-auto-columns: 1fr;
         grid-template-columns: 2.8fr 0.1fr 0.1fr;
-        grid-template-rows: 1fr 15%;
+        grid-template-rows: 1fr 60px;
         gap: 0px 0px;
         grid-template-areas:
             "first-slider__slides first-slider__slides first-slider__slides"
@@ -332,14 +330,15 @@ label {
 
     &__slides {
         grid-area: first-slider__slides;
-        display: grid;
-        grid-template-columns: 100% 0% 0% 0%;
-        grid-template-rows: max-content;
-        margin-bottom: 70px;
-        transition: all 0.7s;
+        display: flex;
+        // display: grid;
+        // grid-template-columns: 1fr 0 0 0 ;
+        // grid-template-rows: max-content;
     }
     &__slide {
+        min-width: 1110px;
         transition: all 0.7s;
+        margin-bottom: 70px;
     }
 }
 
@@ -354,7 +353,7 @@ label {
         color: #ffffff;
         top: 0;
         width: 589px;
-        padding: 0 0 56px 0;
+        padding: 0 0 80px 0;
         display: block;
     }
 
@@ -400,46 +399,45 @@ label {
     grid-area: slide-arrow-prev;
     width: 60px;
     height: 60px;
-    background-color: rgba(255, 255, 255, 0.2);
+    //background-color: rgba(255, 255, 255, 0.2);
     text-align: center;
+    position: relative;
     & img {
         padding: 20px 0 0 0;
     }
     & label {
+        background-color: rgba(255, 255, 255, 0.2);
         width: 60px;
         height: 60px;
         z-index: 0;
         display: none;
         position: relative;
+        top: -35px;
     }
     &:hover {
         background-color: rgba(255, 255, 255, 0.4);
-    }
-    @media (max-width: 1120px) {
-        left: 65%;
     }
 }
 .slide-arrow-next {
     grid-area: slide-arrow-next;
     width: 60px;
     height: 60px;
-    background-color: rgba(255, 255, 255, 0.2);
+    //background-color: rgba(255, 255, 255, 0.2);
     text-align: center;
     & img {
         padding: 20px 0 0 0;
     }
     & label {
+        background-color: rgba(255, 255, 255, 0.2);
         width: 60px;
         height: 60px;
         z-index: 0;
         display: none;
         position: relative;
+        top: -35px;
     }
     &:hover {
         background-color: rgba(255, 255, 255, 0.4);
-    }
-    @media (max-width: 1120px) {
-        left: 65%;
     }
 }
 
@@ -451,16 +449,24 @@ input#slide-4:checked ~ .slider__dots label#dot-4 {
 }
 
 #slide-1:checked ~ .first-slider__slides {
-    grid-template-columns: 100% 0% 0% 0%;
+    //grid-template-columns: 100% 0% 0% 0%;
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
 }
 #slide-2:checked ~ .first-slider__slides {
-    grid-template-columns: 0% 100% 0% 0%;
+    //grid-template-columns: 0% 100% 0% 0%;
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
 }
 #slide-3:checked ~ .first-slider__slides {
-    grid-template-columns: 0% 0% 100% 0%;
+    //grid-template-columns: 0% 0% 100% 0%;
+    -webkit-transform: translateX(-200%);
+    transform: translateX(-200%);
 }
 #slide-4:checked ~ .first-slider__slides {
-    grid-template-columns: 0% 0% 0% 100%;
+    //grid-template-columns: 0% 0% 0% 100%;
+    -webkit-transform: translateX(-300%);
+    transform: translateX(-300%);
 }
 
 input#slide-1:checked ~ .slide-arrow-prev .slider-arrow-1,
@@ -484,10 +490,17 @@ input#slide-4:checked ~ .slide-arrow-next .slider-arrow-4 {
     }
     &__title {
         padding: 147px 0 0 0;
+        @media (max-width: 1120px) {
+            padding: 50px 0 0 50px;
+        }
     }
 
     &__subtitle {
         padding: 42px 0 70px 0;
+        @media (max-width: 1120px) {
+            margin: 0 auto;
+            padding-left: 50px;
+        }
     }
 }
 .title {
@@ -550,8 +563,16 @@ input#slide-4:checked ~ .slide-arrow-next .slider-arrow-4 {
     display: flex;
     justify-content: space-between;
     padding: 146px 0 140px 0;
+    @media (max-width: 880px) {
+        flex-direction: column;
+        padding: 30px 0;
+    }
     &__text {
         max-width: 445px;
+        @media (max-width: 880px) {
+            margin: 0 auto;
+            padding-bottom: 30px;
+        }
     }
 
     &__cases {
@@ -564,6 +585,7 @@ input#slide-4:checked ~ .slide-arrow-next .slider-arrow-4 {
             margin: 0 0 30px 0;
         }
         @media (max-width: 1120px) {
+            margin: 0 auto;
         }
     }
 
