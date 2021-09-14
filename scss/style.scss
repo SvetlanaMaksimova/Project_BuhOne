@@ -69,6 +69,9 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    @media (max-width: 600px) {
+        width: 600px;
+    }
 }
 .container {
     max-width: 1110px;
@@ -80,27 +83,25 @@
 
 .header {
     margin: 22px 0 30px 0;
-    @media (max-width: 880px) {
+    @media (max-width: 800px) {
         margin: 10px 0;
     }
     &__container {
         max-height: 57px;
         display: flex;
         justify-content: space-between;
-        @media (max-width: 880px) {
-            min-height: 30px;
+        @media (max-width: 800px) {
+            max-height: 30px;
         }
     }
-
     &__logo {
         display: flex;
         padding: 11px 0 0 0;
     }
-
     &__menu {
         width: 671px;
         font-family: Lato;
-        @media (max-width: 880px) {
+        @media (max-width: 800px) {
             position: relative;
         }
     }
@@ -130,7 +131,7 @@
     &__info {
         display: flex;
         justify-content: space-between;
-        @media (max-width: 880px) {
+        @media (max-width: 800px) {
             display: none;
         }
     }
@@ -138,7 +139,7 @@
     &__body {
         display: flex;
         justify-content: space-between;
-        @media (max-width: 880px) {
+        @media (max-width: 800px) {
             display: block;
             position: fixed;
             top: 0;
@@ -164,8 +165,7 @@
             font-size: 18px;
             font-weight: 900;
         }
-
-        @media (max-width: 880px) {
+        @media (max-width: 800px) {
             display: block;
             margin: 70px 0;
             font-size: 30px;
@@ -186,7 +186,7 @@
     color: #222222;
     font-size: 13px;
     line-height: 17px;
-    @media (max-width: 880px) {
+    @media (max-width: 800px) {
         margin: 0 0 0 0;
     }
     &__phone {
@@ -246,7 +246,7 @@
     display: none;
     &__line {
         display: none;
-        @media (max-width: 880px) {
+        @media (max-width: 800px) {
             z-index: 6;
             display: block;
             position: relative;
@@ -262,7 +262,7 @@
     }
     &__label {
         display: none;
-        @media (max-width: 880px) {
+        @media (max-width: 800px) {
             display: block;
             position: relative;
             top: 8%;
@@ -306,11 +306,9 @@
     }
 }
 
-//!Как анимировать гриды?
-
 .first-slider {
     &__slider {
-        padding: 179px 0 110px 0;
+        padding: 155px 0 113px 0;
         overflow: hidden;
         display: grid;
         grid-auto-columns: 1fr;
@@ -328,13 +326,10 @@
     &__slides {
         grid-area: first-slider__slides;
         display: flex;
-        // display: grid;
-        // grid-template-columns: 1fr 0 0 0 ;
-        // grid-template-rows: max-content;
+        transition: all 0.7s;
     }
     &__slide {
-        min-width: 1110px;
-        transition: all 0.7s;
+        min-width: 100%;
         margin-bottom: 70px;
     }
 }
@@ -446,22 +441,18 @@ input#slide-4:checked ~ .slider__dots label#dot-4 {
 }
 
 #slide-1:checked ~ .first-slider__slides {
-    //grid-template-columns: 100% 0% 0% 0%;
     -webkit-transform: translateX(0%);
     transform: translateX(0%);
 }
 #slide-2:checked ~ .first-slider__slides {
-    //grid-template-columns: 0% 100% 0% 0%;
     -webkit-transform: translateX(-100%);
     transform: translateX(-100%);
 }
 #slide-3:checked ~ .first-slider__slides {
-    //grid-template-columns: 0% 0% 100% 0%;
     -webkit-transform: translateX(-200%);
     transform: translateX(-200%);
 }
 #slide-4:checked ~ .first-slider__slides {
-    //grid-template-columns: 0% 0% 0% 100%;
     -webkit-transform: translateX(-300%);
     transform: translateX(-300%);
 }
@@ -486,17 +477,25 @@ input#slide-4:checked ~ .slide-arrow-next .slider-arrow-4 {
         }
     }
     &__title {
-        padding: 147px 0 0 0;
+        padding: 140px 0 0 0;
         @media (max-width: 1120px) {
             padding: 50px 0 0 50px;
+        }
+        @media (max-width: 800px) {
+            text-align: center;
+            padding: 40px 0 0 0;
         }
     }
 
     &__subtitle {
-        padding: 42px 0 70px 0;
+        padding: 40px 0 70px 0;
         @media (max-width: 1120px) {
             margin: 0 auto;
             padding-left: 50px;
+        }
+        @media (max-width: 800px) {
+            text-align: center;
+            padding: 20px 0;
         }
     }
 }
@@ -530,6 +529,11 @@ input#slide-4:checked ~ .slide-arrow-next .slider-arrow-4 {
             justify-content: space-around;
             padding-bottom: 30px;
         }
+        @media (max-width: 800px) {
+            & :nth-child(-n + 5) {
+                margin: 0 0 30px 0;
+            }
+        }
     }
 }
 .item {
@@ -559,7 +563,7 @@ input#slide-4:checked ~ .slide-arrow-next .slider-arrow-4 {
 .about-us {
     display: flex;
     justify-content: space-between;
-    padding: 146px 0 140px 0;
+    padding: 140px 0;
     @media (max-width: 880px) {
         flex-direction: column;
         padding: 30px 0;
@@ -568,7 +572,7 @@ input#slide-4:checked ~ .slide-arrow-next .slider-arrow-4 {
         max-width: 445px;
         @media (max-width: 880px) {
             margin: 0 auto;
-            padding-bottom: 30px;
+            padding: 0 0 30px 0;
         }
     }
 
@@ -602,9 +606,15 @@ input#slide-4:checked ~ .slide-arrow-next .slider-arrow-4 {
     }
     &__title {
         margin: 0 0 45px 0;
+        @media (max-width: 800px) {
+            text-align: center;
+        }
     }
     &__subtitle {
         margin: 0 0 60px 0;
+        @media (max-width: 800px) {
+            text-align: center;
+        }
     }
 }
 
@@ -614,6 +624,9 @@ input#slide-4:checked ~ .slide-arrow-next .slider-arrow-4 {
     font-weight: 300;
     font-size: 18px;
     line-height: 25px;
+    @media (max-width: 800px) {
+        text-align: justify;
+    }
 }
 
 .case {
@@ -652,12 +665,23 @@ input#slide-4:checked ~ .slide-arrow-next .slider-arrow-4 {
 .our-clients {
     padding: 100px 0;
     overflow: hidden;
+    @media (max-width: 800px) {
+        padding: 40px 0;
+    }
     &__title {
         margin-bottom: 40px;
+        @media (max-width: 800px) {
+            text-align: center;
+        }
     }
 
     &__subtitle {
         margin-bottom: 80px;
+        line-height: 37px;
+        @media (max-width: 800px) {
+            text-align: center;
+            margin-bottom: 40px;
+        }
     }
 
     &__slider {
@@ -675,14 +699,14 @@ input#slide-4:checked ~ .slide-arrow-next .slider-arrow-4 {
     }
 
     &__slides {
+        align-items: center;
         display: flex;
         transition: all 0.5s;
         margin-bottom: 50px;
         grid-area: our-clients__slides;
     }
     &__slide {
-        display: grid;
-        grid-template-columns: 25% 25% 25% 25%;
+        display: flex;
         & img {
             margin-right: 30px;
         }
@@ -690,6 +714,12 @@ input#slide-4:checked ~ .slide-arrow-next .slider-arrow-4 {
             margin-right: 0;
         }
         @media (max-width: 1120px) {
+            min-width: 100%;
+            flex-wrap: wrap;
+            justify-content: center;
+            & img {
+                margin-right: 0px;
+            }
         }
     }
 }
@@ -796,12 +826,23 @@ input#btn-4:checked ~ .arrow-next .arrow-4 {
 .reviews {
     overflow: hidden;
     padding: 140px 0;
+    @media (max-width: 800px) {
+        padding: 40px 0;
+    }
     &__title {
         margin-bottom: 40px;
+        line-height: 23px;
+        @media (max-width: 800px) {
+            text-align: center;
+        }
     }
 
     &__subtitle {
+        line-height: 40px;
         margin-bottom: 80px;
+        @media (max-width: 800px) {
+            text-align: center;
+        }
     }
 
     &__slaider {
@@ -862,8 +903,9 @@ input#btn-4:checked ~ .arrow-next .arrow-4 {
 }
 
 .rewiew-dots-blue {
-    display: inline-block;
     grid-area: rewiew-dots-blue;
+    align-self: end;
+    justify-self: start;
 }
 .rewiew-dot-blue {
     width: 10px;
@@ -963,11 +1005,21 @@ input#rew-inp-4:checked ~ .rewiew-arrow-next .arrow-4 {
     display: flex;
     justify-content: space-between;
     padding: 122px 0 140px 0;
+
+    @media (max-width: 800px) {
+        flex-direction: column;
+        padding-left: 50px;
+    }
+    @media (max-width: 600px) {
+        padding: 20px 0 0 0;
+    }
+
     &__contact-us {
         position: relative;
     }
 
     &__subtitle {
+        line-height: 47px;
         color: #ffffff;
         margin-bottom: 60px;
     }
@@ -981,7 +1033,7 @@ input#rew-inp-4:checked ~ .rewiew-arrow-next .arrow-4 {
 
     &__phone {
         display: inline-block;
-        margin-right: 40px;
+        margin: 0 40px 20px 0;
         padding-left: 35px;
         background: url(/img/phone-white.svg) 0 0 no-repeat;
         text-align: center;
@@ -1012,8 +1064,11 @@ input#rew-inp-4:checked ~ .rewiew-arrow-next .arrow-4 {
 
     &__form {
         min-width: 540px;
-        padding-top: 20px;
+        //padding-top: 20px;
         position: relative;
+        @media (max-width: 600px) {
+            padding: 20px 0;
+        }
     }
 }
 
@@ -1141,7 +1196,7 @@ input#rew-inp-4:checked ~ .rewiew-arrow-next .arrow-4 {
             font-size: 16px;
             line-height: 22px;
             color: #ffffff;
-            margin-bottom: 15px;
+            margin-bottom: 5px;
         }
     }
     &__button {
