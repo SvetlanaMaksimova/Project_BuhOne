@@ -57,22 +57,22 @@
                         <input type="radio" name="slider-btn" id="slide-2">
                         <input type="radio" name="slider-btn" id="slide-3">
                         <input type="radio" name="slider-btn" id="slide-4">
-                        <div class="first-slider__slide">
-                            <div class="slide-item">
+                        <div class="first-slider__slides">
+                            <div class="first-slider__slide">
                                 <h1 class="slider__text">Бухгалтерские услуги в Санкт-Петербурге</h1>
-                                <button class="slide-item__button button" type="button">Наша презентация</button>
+                                <button class="button" type="button">Наша презентация</button>
                             </div>
-                            <div class="slide-item">
+                            <div class="first-slider__slide">
                                 <span class="slider__text">Бухгалтерские услуги в Санкт-Петербурге</span>
-                                <button class="slide-item__button" type="button">Наша презентация</button>
+                                <button class="button" type="button">Наша презентация</button>
                             </div>
-                            <div class="slide-item">
+                            <div class="first-slider__slide">
                                 <span class="slider__text">Бухгалтерские услуги в Санкт-Петербурге</span>
-                                <button class="slide-item__button" type="button">Наша презентация</button>
+                                <button class="button" type="button">Наша презентация</button>
                             </div>
-                            <div class="slide-item">
+                            <div class="first-slider__slide">
                                 <span class="slider__text">Бухгалтерские услуги в Санкт-Петербурге</span>
-                                <button class="slide-item__button" type="button">Наша презентация</button>
+                                <button class="button" type="button">Наша презентация</button>
                             </div>
                         </div>
                         <div class="slider__dots">
@@ -82,24 +82,17 @@
                             <label for="slide-4" class="slider__dot" id="dot-4"></label>
                         </div>
                         <div class="slide-arrow-prev">
-                            <label for="slide-4" class="slider-arrow-1"><img src="/img/slides/prev_arrow.svg"
-                                    alt=""></label>
-                            <label for="slide-1" class="slider-arrow-2"><img src="/img/slides/prev_arrow.svg"
-                                    alt=""></label>
-                            <label for="slide-2" class="slider-arrow-3"><img src="/img/slides/prev_arrow.svg"
-                                    alt=""></label>
-                            <label for="slide-3" class="slider-arrow-4"><img src="/img/slides/prev_arrow.svg"
-                                    alt=""></label>
+                            <img src="/img/slides/prev_arrow.svg" alt="">
+                            <label for="slide-4" class="slider-arrow-1"></label>
+                            <label for="slide-1" class="slider-arrow-2"></label>
+                            <label for="slide-2" class="slider-arrow-3"></label>
+                            <label for="slide-3" class="slider-arrow-4"></label>
                         </div>
-                        <div class="slide-arrow-next">
-                            <label for="slide-2" class="slider-arrow-1"><img src="/img/slides/next_arrow.svg"
-                                    alt=""></label>
-                            <label for="slide-3" class="slider-arrow-2"><img src="/img/slides/next_arrow.svg"
-                                    alt=""></label>
-                            <label for="slide-4" class="slider-arrow-3"><img src="/img/slides/next_arrow.svg"
-                                    alt=""></label>
-                            <label for="slide-1" class="slider-arrow-4"><img src="/img/slides/next_arrow.svg"
-                                    alt=""></label>
+                        <div class="slide-arrow-next"><img src="/img/slides/next_arrow.svg" alt="">
+                            <label for="slide-2" class="slider-arrow-1"></label>
+                            <label for="slide-3" class="slider-arrow-2"></label>
+                            <label for="slide-4" class="slider-arrow-3"></label>
+                            <label for="slide-1" class="slider-arrow-4"></label>
                         </div>
                     </div>
                 </div>
@@ -152,24 +145,24 @@
                         </div>
                         <div class="about-us__cases">
                             <div class="about-us__case">
-                                <div class="case-title">90</div>
-                                <div class="case-text">Завершено крупных сделок</div>
-                                <div class="case-link"><a href="">Все кейсы</a></div>
+                                <div class="case__title">90</div>
+                                <div class="case__text">Завершено крупных сделок</div>
+                                <div class="case__link"><a href="">Все кейсы</a></div>
                             </div>
                             <div class="about-us__case">
-                                <div class="case-title">90</div>
-                                <div class="case-text">Завершено крупных сделок</div>
-                                <div class="case-link"><a href="">Все кейсы</a></div>
+                                <div class="case__title">90</div>
+                                <div class="case__text">Завершено крупных сделок</div>
+                                <div class="case__link"><a href="">Все кейсы</a></div>
                             </div>
                             <div class="about-us__case">
-                                <div class="case-title">90</div>
-                                <div class="case-text">Завершено крупных сделок</div>
-                                <div class="case-link"><a href="">Все кейсы</a></div>
+                                <div class="case__title">90</div>
+                                <div class="case__text">Завершено крупных сделок</div>
+                                <div class="case__link"><a href="">Все кейсы</a></div>
                             </div>
                             <div class="about-us__case">
-                                <div class="case-title">90</div>
-                                <div class="case-text">Завершено крупных сделок</div>
-                                <div class="case-link"><a href="">Все кейсы</a></div>
+                                <div class="case__title">90</div>
+                                <div class="case__text">Завершено крупных сделок</div>
+                                <div class="case__link"><a href="">Все кейсы</a></div>
                             </div>
                         </div>
                     </div>
@@ -348,7 +341,8 @@
                             <div class="contact-us__text text">У вас остались вопросы? Напишите нам - мы ответим в
                                 ближайшее
                                 время!</div>
-                            <div class="contact-us__phone"><a class="link" href="tel:+71112223344">+7 (111) 222-33-44</a>
+                            <div class="contact-us__phone"><a class="link" href="tel:+71112223344">+7 (111)
+                                    222-33-44</a>
                             </div>
                             <div class="contact-us__mail"><a class="link"
                                     href="mailto:order@buhone.ru">order@buhone.ru</a>
@@ -367,7 +361,7 @@
                                 <div>Сообщение</div>
                                 <textarea cols="76" rows="7" placeholder="Ваше сообщение"></textarea>
                             </div>
-                            <button class="form__button button" type="button" >Отправить сообщение</button>
+                            <button class="form__button button" type="button">Отправить сообщение</button>
                         </form>
                     </div>
                 </div>
