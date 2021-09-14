@@ -299,9 +299,6 @@
         background: #ebebeb;
     }
 
-    &__reviews {
-    }
-
     &__contact-us {
         background-image: url("/img/slides/Rectangle.png");
         background-size: cover;
@@ -664,6 +661,14 @@ input#slide-4:checked ~ .slide-arrow-next .slider-arrow-4 {
     }
 
     &__slider {
+        display: grid;
+        grid-auto-columns: 1fr;
+        grid-template-columns: 2.8fr 0.1fr 0.1fr;
+        grid-template-rows: 1fr 60px;
+        gap: 0px 0px;
+        grid-template-areas:
+            "our-clients__slides our-clients__slides our-clients__slides"
+            "slider-dots-blue arrow-prev arrow-next";
         & input {
             display: none;
         }
@@ -673,6 +678,7 @@ input#slide-4:checked ~ .slide-arrow-next .slider-arrow-4 {
         display: flex;
         transition: all 0.5s;
         margin-bottom: 50px;
+        grid-area: our-clients__slides;
     }
     &__slide {
         display: grid;
@@ -689,11 +695,8 @@ input#slide-4:checked ~ .slide-arrow-next .slider-arrow-4 {
 }
 
 .arrow-prev {
-    position: relative;
-    left: 69.5%;
-    display: inline-block;
+    grid-area: arrow-prev;
     background-color: rgba(0, 95, 163, 0.2);
-    margin-right: -3px;
     & label {
         width: 60px;
         height: 60px;
@@ -715,9 +718,7 @@ input#slide-4:checked ~ .slide-arrow-next .slider-arrow-4 {
     }
 }
 .arrow-next {
-    position: relative;
-    left: 69.5%;
-    display: inline-block;
+    grid-area: arrow-next;
     background-color: rgba(0, 95, 163, 0.2);
     & label {
         width: 60px;
@@ -742,6 +743,9 @@ input#slide-4:checked ~ .slide-arrow-next .slider-arrow-4 {
 
 .slider-dots-blue {
     display: inline-block;
+    grid-area: slider-dots-blue;
+    align-self: end;
+    justify-self: start;
 }
 .dot-blue {
     width: 10px;
@@ -801,12 +805,21 @@ input#btn-4:checked ~ .arrow-next .arrow-4 {
     }
 
     &__slaider {
+        display: grid;
+        grid-auto-columns: 1fr;
+        grid-template-columns: 2.8fr 0.1fr 0.1fr;
+        grid-template-rows: 1fr 60px;
+        gap: 0px 0px;
+        grid-template-areas:
+            "reviews__slides reviews__slides reviews__slides"
+            "rewiew-dots-blue rewiew-arrow-prev rewiew-arrow-next";
         & input {
             display: none;
         }
     }
 
     &__slides {
+        grid-area: reviews__slides;
         margin-bottom: 50px;
         display: flex;
         transition: all 0.5s;
@@ -850,6 +863,7 @@ input#btn-4:checked ~ .arrow-next .arrow-4 {
 
 .rewiew-dots-blue {
     display: inline-block;
+    grid-area: rewiew-dots-blue;
 }
 .rewiew-dot-blue {
     width: 10px;
@@ -864,11 +878,8 @@ input#btn-4:checked ~ .arrow-next .arrow-4 {
     }
 }
 .rewiew-arrow-prev {
-    position: relative;
-    left: 69.5%;
-    display: inline-block;
+    grid-area: rewiew-arrow-prev;
     background-color: rgba(0, 95, 163, 0.2);
-    margin-right: -3px;
     & label {
         width: 60px;
         height: 60px;
@@ -890,9 +901,7 @@ input#btn-4:checked ~ .arrow-next .arrow-4 {
     }
 }
 .rewiew-arrow-next {
-    position: relative;
-    left: 69.5%;
-    display: inline-block;
+    grid-area: rewiew-arrow-next;
     background-color: rgba(0, 95, 163, 0.2);
     & label {
         width: 60px;
