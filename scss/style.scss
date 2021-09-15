@@ -87,7 +87,7 @@
         margin: 10px 0;
     }
     &__container {
-        max-height: 57px;
+        min-height: 57px;
         display: flex;
         justify-content: space-between;
         @media (max-width: 800px) {

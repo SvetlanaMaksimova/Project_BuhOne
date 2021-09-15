@@ -175,7 +175,7 @@ h6 {
 }
 
 .header__container {
-  max-height: 57px;
+  min-height: 57px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
