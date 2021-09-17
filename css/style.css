@@ -476,6 +476,19 @@ h6 {
   display: none;
 }
 
+@media (max-width: 800px) {
+  .first-slider__slider {
+    padding: 100px 0 50px 0;
+    grid-auto-columns: 1fr;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 60px 60px;
+        grid-template-rows: 1fr 60px 60px;
+    gap: 0px 0px;
+        grid-template-areas: "first-slider__slides first-slider__slides" "slider__dots slider__dots" "slide-arrow-prev slide-arrow-next";
+  }
+}
+
 .first-slider__slides {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
@@ -493,6 +506,14 @@ h6 {
   margin-bottom: 70px;
 }
 
+@media (max-width: 800px) {
+  .first-slider__slide {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+}
+
 .slider__text {
   max-width: 589px;
   font-family: Merriweather;
@@ -505,6 +526,14 @@ h6 {
   width: 589px;
   padding: 0 0 80px 0;
   display: block;
+}
+
+@media (max-width: 800px) {
+  .slider__text {
+    display: inline-block;
+    font-size: 30px;
+    text-align: center;
+  }
 }
 
 .slider__dots {
@@ -522,6 +551,19 @@ h6 {
 
 .slider__dots :first-child {
   margin: 0 15px 0 1px;
+}
+
+@media (max-width: 800px) {
+  .slider__dots {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  .slider__dots :first-child {
+    margin: 0 15px 0 15px;
+  }
 }
 
 .slider__dot {
@@ -577,6 +619,13 @@ h6 {
 
 .slide-arrow-prev:hover {
   background-color: rgba(255, 255, 255, 0.4);
+}
+
+@media (max-width: 800px) {
+  .slide-arrow-prev {
+    -ms-grid-column-align: end;
+        justify-self: end;
+  }
 }
 
 .slide-arrow-next {
@@ -698,6 +747,12 @@ input#slide-4:checked ~ .slide-arrow-next .slider-arrow-4 {
   color: #bdbdbd;
 }
 
+@media (max-width: 800px) {
+  .title {
+    font-size: 18px;
+  }
+}
+
 .subtitle {
   font-family: Merriweather;
   font-style: normal;
@@ -709,6 +764,12 @@ input#slide-4:checked ~ .slide-arrow-next .slider-arrow-4 {
 
 .subtitle span {
   color: #005fa3;
+}
+
+@media (max-width: 800px) {
+  .subtitle {
+    font-size: 30px;
+  }
 }
 
 .items__item {

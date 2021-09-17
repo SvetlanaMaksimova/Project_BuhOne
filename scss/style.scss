@@ -328,6 +328,17 @@
         & input {
             display: none;
         }
+        @media (max-width: 800px) {
+            padding: 100px 0 50px 0;
+            grid-auto-columns: 1fr;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 60px 60px;
+            gap: 0px 0px;
+            grid-template-areas:
+                "first-slider__slides first-slider__slides"
+                "slider__dots slider__dots"
+                "slide-arrow-prev slide-arrow-next";
+        }
     }
 
     &__slides {
@@ -338,6 +349,11 @@
     &__slide {
         min-width: 100%;
         margin-bottom: 70px;
+        @media (max-width: 800px) {
+            font-size: 30px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
     }
 }
 
@@ -354,6 +370,11 @@
         width: 589px;
         padding: 0 0 80px 0;
         display: block;
+        @media (max-width: 800px) {
+            display: inline-block;
+            font-size: 30px;
+            text-align: center;
+        }
     }
 
     &__dots {
@@ -364,6 +385,13 @@
         text-align: left;
         & :first-child {
             margin: 0 15px 0 1px;
+        }
+        @media (max-width: 800px) {
+            align-self: center;
+            justify-self: center;
+            & :first-child {
+                margin: 0 15px 0 15px;
+            }
         }
     }
 
@@ -415,6 +443,9 @@
     }
     &:hover {
         background-color: rgba(255, 255, 255, 0.4);
+    }
+    @media (max-width: 800px) {
+        justify-self: end;
     }
 }
 .slide-arrow-next {
@@ -512,6 +543,9 @@ input#slide-4:checked ~ .slide-arrow-next .slider-arrow-4 {
     font-size: 24px;
     line-height: 33.12px;
     color: #bdbdbd;
+    @media (max-width: 800px) {
+        font-size: 18px;
+    }
 }
 .subtitle {
     font-family: Merriweather;
@@ -522,6 +556,9 @@ input#slide-4:checked ~ .slide-arrow-next .slider-arrow-4 {
     color: #333333;
     & span {
         color: #005fa3;
+    }
+    @media (max-width: 800px) {
+        font-size: 30px;
     }
 }
 .items {
