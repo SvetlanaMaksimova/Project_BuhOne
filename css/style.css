@@ -274,6 +274,8 @@ h6 {
 }
 
 .menu__link {
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
   letter-spacing: 0.1em;
   line-height: 17px;
   font-family: "Lato";
@@ -285,8 +287,12 @@ h6 {
   transition: all 0.5s ease;
 }
 
+.menu__link:last-child {
+  text-align: end;
+}
+
 .menu__link:hover {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 900;
 }
 
