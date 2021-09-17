@@ -139,17 +139,18 @@
     &__body {
         display: flex;
         justify-content: space-between;
-
         @media (max-width: 800px) {
             display: block;
             position: fixed;
             top: 0;
             left: 0;
-            background-color: hsla(205, 100%, 32%, 0.9);
+            background-color: rgba(0, 95, 163, 0.9);
             padding: 0px 35px;
             max-height: 0px;
             font-size: 0px;
             overflow: hidden;
+            overflow-y: scroll;
+            scroll-behavior: smooth;
         }
     }
 
@@ -175,10 +176,12 @@
             margin: 70px 0;
             font-size: 30px;
             color: white;
-            text-decoration: none;
             &:hover {
-                font-size: 18px;
-                font-weight: 900;
+                font-size: 30px;
+                text-decoration: underline;
+            }
+            &:last-child {
+                text-align: center;
             }
         }
     }
@@ -224,31 +227,32 @@
 #burger-menu {
     display: none;
     z-index: 9;
-    &:checked ~ .menu__body {
-        min-height: 100%;
-        z-index: 5;
-        min-width: 100%;
-        text-align: center;
-        transition: all 0.5s ease 0.25s;
-    }
-    &:checked ~ .first {
-        display: none;
-    }
-    &:checked ~ .second {
-        transform: rotate(45deg);
-        background-color: #ffffff;
-    }
-    &:checked ~ .third {
-        transform: rotate(-45deg);
-        background-color: #ffffff;
-    }
-    &:checked ~ .fourth {
-        display: none;
+    @media (max-width: 800px) {
+        &:checked ~ .menu__body {
+            max-height: 100%;
+            z-index: 5;
+            min-width: 100%;
+            text-align: center;
+            transition: all 0.5s ease 0.25s;
+        }
+        &:checked ~ .first {
+            display: none;
+        }
+        &:checked ~ .second {
+            transform: rotate(45deg);
+            background-color: #ffffff;
+        }
+        &:checked ~ .third {
+            transform: rotate(-45deg);
+            background-color: #ffffff;
+        }
+        &:checked ~ .fourth {
+            display: none;
+        }
     }
 }
 
 .burger {
-    display: none;
     &__line {
         display: none;
         @media (max-width: 800px) {
@@ -257,8 +261,6 @@
             position: relative;
             top: -60%;
             left: 80%;
-            //top: 50px;
-            //right: 20px;
             width: 40px;
             height: 3px;
             background-color: #005fa3;
