@@ -242,6 +242,8 @@ h6 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 @media (max-width: 800px) {
@@ -276,8 +278,6 @@ h6 {
 }
 
 .menu__link {
-  -ms-flex-preferred-size: 20%;
-      flex-basis: 20%;
   letter-spacing: 0.1em;
   line-height: 17px;
   font-family: "Lato";
@@ -294,7 +294,7 @@ h6 {
 }
 
 .menu__link:hover {
-  font-size: 16px;
+  text-decoration: underline;
   font-weight: 900;
 }
 

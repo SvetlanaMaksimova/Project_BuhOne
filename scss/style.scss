@@ -131,6 +131,7 @@
     &__info {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
         @media (max-width: 800px) {
             display: none;
         }
@@ -155,7 +156,7 @@
     }
 
     &__link {
-        flex-basis: 20%;
+        //flex-basis: 20%;
         letter-spacing: 0.1em;
         line-height: 17px;
         font-family: "Lato";
@@ -168,7 +169,7 @@
             text-align: end;
         }
         &:hover {
-            font-size: 16px;
+            text-decoration: underline;
             font-weight: 900;
         }
         @media (max-width: 800px) {
