@@ -372,7 +372,7 @@
         display: block;
         @media (max-width: 800px) {
             display: inline-block;
-            font-size: 30px;
+            font-size: 36px;
             text-align: center;
         }
     }
@@ -420,6 +420,10 @@
     text-align: center;
     color: #ffffff;
     background-color: #005fa3;
+    &:hover {
+        background-color: #005fa3;
+        background: linear-gradient(0deg, #005fa3 0%, #0496ff 100%);
+    }
 }
 
 .slide-arrow-prev {
@@ -440,9 +444,10 @@
         display: none;
         position: relative;
         top: -35px;
-    }
-    &:hover {
-        background-color: rgba(255, 255, 255, 0.4);
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.4);
+            cursor: pointer;
+        }
     }
     @media (max-width: 800px) {
         justify-self: end;
@@ -465,9 +470,10 @@
         display: none;
         position: relative;
         top: -35px;
-    }
-    &:hover {
-        background-color: rgba(255, 255, 255, 0.4);
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.4);
+            cursor: pointer;
+        }
     }
 }
 
@@ -533,7 +539,7 @@ input#slide-4:checked ~ .slide-arrow-next .slider-arrow-4 {
         }
         @media (max-width: 800px) {
             text-align: center;
-            padding: 20px 0;
+            padding: 30px 0;
         }
     }
 }
@@ -544,7 +550,7 @@ input#slide-4:checked ~ .slide-arrow-next .slider-arrow-4 {
     line-height: 33.12px;
     color: #bdbdbd;
     @media (max-width: 800px) {
-        font-size: 18px;
+        font-size: 20px;
     }
 }
 .subtitle {
@@ -558,7 +564,7 @@ input#slide-4:checked ~ .slide-arrow-next .slider-arrow-4 {
         color: #005fa3;
     }
     @media (max-width: 800px) {
-        font-size: 30px;
+        font-size: 36px;
     }
 }
 .items {
@@ -572,10 +578,13 @@ input#slide-4:checked ~ .slide-arrow-next .slider-arrow-4 {
         @media (max-width: 1120px) {
             justify-content: space-around;
             padding-bottom: 30px;
+            & :nth-child(-n + 4) {
+                margin: 0 5px 30px 0;
+            }
         }
         @media (max-width: 800px) {
             & :nth-child(-n + 5) {
-                margin: 0 0 30px 0;
+                margin: 0 5px 30px 0;
             }
         }
     }
@@ -602,6 +611,14 @@ input#slide-4:checked ~ .slide-arrow-next .slider-arrow-4 {
             color: #ffffff;
         }
     }
+    @media (max-width: 800px) {
+        width: 280px;
+        height: 290px;
+    }
+    @media (max-width: 600px) {
+        width: 250px;
+        height: 260px;
+    }
 }
 
 .about-us {
@@ -615,8 +632,9 @@ input#slide-4:checked ~ .slide-arrow-next .slider-arrow-4 {
     &__text {
         max-width: 445px;
         @media (max-width: 880px) {
+            max-width: 95%;
             margin: 0 auto;
-            padding: 0 0 30px 0;
+            padding: 0 0 50px 0;
         }
     }
 
@@ -652,12 +670,15 @@ input#slide-4:checked ~ .slide-arrow-next .slider-arrow-4 {
         margin: 0 0 45px 0;
         @media (max-width: 800px) {
             text-align: center;
+            margin: 0 0 30px 0;
         }
     }
     &__subtitle {
         margin: 0 0 60px 0;
         @media (max-width: 800px) {
             text-align: center;
+            margin: 0 0 40px 0;
+            line-height: 40px;
         }
     }
 }
@@ -783,9 +804,10 @@ input#slide-4:checked ~ .slide-arrow-next .slider-arrow-4 {
             left: 45%;
             transform: translate(0, -50%);
         }
-    }
-    &:hover {
-        background-color: #005fa3;
+        &:hover {
+            background-color: #005fa3;
+            cursor: pointer;
+        }
     }
     @media (max-width: 1120px) {
         left: 65%;
@@ -806,9 +828,10 @@ input#slide-4:checked ~ .slide-arrow-next .slider-arrow-4 {
             left: 45%;
             transform: translate(0, -50%);
         }
-    }
-    &:hover {
-        background-color: #005fa3;
+        &:hover {
+            background-color: #005fa3;
+            cursor: pointer;
+        }
     }
     @media (max-width: 1120px) {
         left: 65%;
@@ -978,9 +1001,10 @@ input#btn-4:checked ~ .arrow-next .arrow-4 {
             left: 45%;
             transform: translate(0, -50%);
         }
-    }
-    &:hover {
-        background-color: #005fa3;
+        &:hover {
+            background-color: #005fa3;
+            cursor: pointer;
+        }
     }
     @media (max-width: 1120px) {
         left: 65%;
@@ -1001,10 +1025,12 @@ input#btn-4:checked ~ .arrow-next .arrow-4 {
             left: 45%;
             transform: translate(0, -50%);
         }
+        &:hover {
+            background-color: #005fa3;
+            cursor: pointer;
+        }
     }
-    &:hover {
-        background-color: #005fa3;
-    }
+
     @media (max-width: 1120px) {
         left: 65%;
     }
@@ -1052,7 +1078,7 @@ input#rew-inp-4:checked ~ .rewiew-arrow-next .arrow-4 {
 
     @media (max-width: 800px) {
         flex-direction: column;
-        padding-left: 50px;
+        padding: 80px 0;
     }
     @media (max-width: 600px) {
         padding: 20px 0 0 0;
@@ -1060,12 +1086,28 @@ input#rew-inp-4:checked ~ .rewiew-arrow-next .arrow-4 {
 
     &__contact-us {
         position: relative;
+        @media (max-width: 800px) {
+            margin-bottom: 60px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 77px 65px 32px;
+            gap: 0px 0px;
+            grid-template-areas:
+                "contact-us__subtitle contact-us__subtitle"
+                "contact-us__text contact-us__text"
+                "contact-us__phone contact-us__mail";
+        }
     }
 
     &__subtitle {
         line-height: 47px;
         color: #ffffff;
         margin-bottom: 60px;
+        @media (max-width: 800px) {
+            grid-area: contact-us__subtitle;
+            text-align: center;
+            margin-bottom: 30px;
+        }
     }
 
     &__text {
@@ -1073,20 +1115,32 @@ input#rew-inp-4:checked ~ .rewiew-arrow-next .arrow-4 {
         color: #ffffff;
         margin-bottom: 80px;
         font-weight: 300;
+        @media (max-width: 800px) {
+            grid-area: contact-us__text;
+            text-align: center;
+            max-width: 100%;
+            margin-bottom: 40px;
+        }
     }
-
     &__phone {
         display: inline-block;
         margin: 0 40px 20px 0;
         padding-left: 35px;
         background: url(/img/phone-white.svg) 0 0 no-repeat;
         text-align: center;
+        @media (max-width: 800px) {
+            margin: 0;
+            text-align: start;
+            grid-area: contact-us__phone;
+            align-self: center;
+            justify-self: center;
+        }
         & a {
             font-family: Lato;
             font-style: normal;
             font-weight: 300;
             font-size: 21px;
-            line-height: 29px;
+            line-height: 32px;
             color: #ffffff;
         }
     }
@@ -1096,6 +1150,12 @@ input#rew-inp-4:checked ~ .rewiew-arrow-next .arrow-4 {
         padding-left: 53px;
         background: url(/img/mail-white.svg) 0 0 no-repeat;
         text-align: center;
+        @media (max-width: 800px) {
+            grid-area: contact-us__mail;
+            text-align: start;
+            align-self: center;
+            justify-self: center;
+        }
         & a {
             font-family: Lato;
             font-style: normal;
@@ -1108,8 +1168,17 @@ input#rew-inp-4:checked ~ .rewiew-arrow-next .arrow-4 {
 
     &__form {
         min-width: 540px;
-        //padding-top: 20px;
         position: relative;
+        @media (max-width: 800px) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 73px 200px 60px;
+            gap: 0px 0px;
+            grid-template-areas:
+                "form__name form__surname"
+                "form__text form__text"
+                "form__button form__button";
+        }
         @media (max-width: 600px) {
             padding: 20px 0;
         }
@@ -1120,20 +1189,11 @@ input#rew-inp-4:checked ~ .rewiew-arrow-next .arrow-4 {
     &__name {
         display: inline-block;
         margin-right: 30px;
-        :focus::-webkit-input-placeholder {
-            color: transparent;
-        }
-        :focus::-moz-placeholder {
-            color: transparent;
-        }
-        :focus:-moz-placeholder {
-            color: transparent;
-        }
-        :focus:-ms-input-placeholder {
-            color: transparent;
-        }
-        :hover {
-            background-color: rgba(255, 255, 255, 0.1);
+        @media (max-width: 800px) {
+            grid-area: form__name;
+            margin-right: 15px;
+            align-self: center;
+            justify-self: end;
         }
         ::placeholder {
             font-family: Lato;
@@ -1157,11 +1217,21 @@ input#rew-inp-4:checked ~ .rewiew-arrow-next .arrow-4 {
             min-height: 36px;
             background-color: transparent;
             border-bottom: 1px solid #ffffff;
+            color: white;
+            font-size: 20px;
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.1);
+            }
         }
     }
 
     &__surname {
         display: inline-block;
+        @media (max-width: 800px) {
+            grid-area: form__surname;
+            align-self: center;
+            justify-self: start;
+        }
         ::placeholder {
             font-family: Lato;
             font-style: normal;
@@ -1169,21 +1239,6 @@ input#rew-inp-4:checked ~ .rewiew-arrow-next .arrow-4 {
             font-size: 21px;
             line-height: 29px;
             color: #bdbdbd;
-        }
-        :focus::-webkit-input-placeholder {
-            color: transparent;
-        }
-        :focus::-moz-placeholder {
-            color: transparent;
-        }
-        :focus:-moz-placeholder {
-            color: transparent;
-        }
-        :focus:-ms-input-placeholder {
-            color: transparent;
-        }
-        :hover {
-            background-color: rgba(255, 255, 255, 0.1);
         }
         & div {
             font-family: Lato;
@@ -1199,11 +1254,21 @@ input#rew-inp-4:checked ~ .rewiew-arrow-next .arrow-4 {
             border-bottom: 1px solid #ffffff;
             min-width: 255px;
             min-height: 36px;
+            color: white;
+            font-size: 20px;
+            :hover {
+                background-color: rgba(255, 255, 255, 0.1);
+            }
         }
     }
 
     &__text {
         margin: 35px 0 50px 0;
+        @media (max-width: 800px) {
+            grid-area: form__text;
+            align-self: center;
+            justify-self: center;
+        }
         ::placeholder {
             font-family: Lato;
             font-style: normal;
@@ -1212,26 +1277,14 @@ input#rew-inp-4:checked ~ .rewiew-arrow-next .arrow-4 {
             line-height: 29px;
             color: #bdbdbd;
         }
-
-        :focus::-webkit-input-placeholder {
-            color: transparent;
-        }
-        :focus::-moz-placeholder {
-            color: transparent;
-        }
-        :focus:-moz-placeholder {
-            color: transparent;
-        }
-        :focus:-ms-input-placeholder {
-            color: transparent;
-        }
-        :hover {
-            background-color: rgba(255, 255, 255, 0.1);
-        }
         & textarea {
             background-color: transparent;
             border-bottom: 1px solid #ffffff;
             resize: none;
+            color: white;
+            :hover {
+                background-color: rgba(255, 255, 255, 0.1);
+            }
         }
         & div {
             font-family: Lato;
@@ -1246,6 +1299,10 @@ input#rew-inp-4:checked ~ .rewiew-arrow-next .arrow-4 {
     &__button {
         position: relative;
         left: 50%;
+        @media (max-width: 800px) {
+            grid-area: form__button;
+            left: 30%;
+        }
     }
 }
 

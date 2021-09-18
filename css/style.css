@@ -531,7 +531,7 @@ h6 {
 @media (max-width: 800px) {
   .slider__text {
     display: inline-block;
-    font-size: 30px;
+    font-size: 36px;
     text-align: center;
   }
 }
@@ -593,6 +593,12 @@ h6 {
   background-color: #005fa3;
 }
 
+.button:hover {
+  background-color: #005fa3;
+  background: -webkit-gradient(linear, left bottom, left top, from(#005fa3), to(#0496ff));
+  background: linear-gradient(0deg, #005fa3 0%, #0496ff 100%);
+}
+
 .slide-arrow-prev {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
@@ -617,8 +623,9 @@ h6 {
   top: -35px;
 }
 
-.slide-arrow-prev:hover {
+.slide-arrow-prev label:hover {
   background-color: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
 }
 
 @media (max-width: 800px) {
@@ -651,8 +658,9 @@ h6 {
   top: -35px;
 }
 
-.slide-arrow-next:hover {
+.slide-arrow-next label:hover {
   background-color: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
 }
 
 input#slide-1:checked ~ .slider__dots label#dot-1,
@@ -735,7 +743,7 @@ input#slide-4:checked ~ .slide-arrow-next .slider-arrow-4 {
 @media (max-width: 800px) {
   .our-services__subtitle {
     text-align: center;
-    padding: 20px 0;
+    padding: 30px 0;
   }
 }
 
@@ -749,7 +757,7 @@ input#slide-4:checked ~ .slide-arrow-next .slider-arrow-4 {
 
 @media (max-width: 800px) {
   .title {
-    font-size: 18px;
+    font-size: 20px;
   }
 }
 
@@ -768,7 +776,7 @@ input#slide-4:checked ~ .slide-arrow-next .slider-arrow-4 {
 
 @media (max-width: 800px) {
   .subtitle {
-    font-size: 30px;
+    font-size: 36px;
   }
 }
 
@@ -793,11 +801,14 @@ input#slide-4:checked ~ .slide-arrow-next .slider-arrow-4 {
         justify-content: space-around;
     padding-bottom: 30px;
   }
+  .items__item :nth-child(-n + 4) {
+    margin: 0 5px 30px 0;
+  }
 }
 
 @media (max-width: 800px) {
   .items__item :nth-child(-n + 5) {
-    margin: 0 0 30px 0;
+    margin: 0 5px 30px 0;
   }
 }
 
@@ -829,6 +840,20 @@ input#slide-4:checked ~ .slide-arrow-next .slider-arrow-4 {
   color: #ffffff;
 }
 
+@media (max-width: 800px) {
+  .item {
+    width: 280px;
+    height: 290px;
+  }
+}
+
+@media (max-width: 600px) {
+  .item {
+    width: 250px;
+    height: 260px;
+  }
+}
+
 .about-us {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -855,8 +880,9 @@ input#slide-4:checked ~ .slide-arrow-next .slider-arrow-4 {
 
 @media (max-width: 880px) {
   .about-us__text {
+    max-width: 95%;
     margin: 0 auto;
-    padding: 0 0 30px 0;
+    padding: 0 0 50px 0;
   }
 }
 
@@ -907,6 +933,7 @@ input#slide-4:checked ~ .slide-arrow-next .slider-arrow-4 {
 @media (max-width: 800px) {
   .about-us__title {
     text-align: center;
+    margin: 0 0 30px 0;
   }
 }
 
@@ -917,6 +944,8 @@ input#slide-4:checked ~ .slide-arrow-next .slider-arrow-4 {
 @media (max-width: 800px) {
   .about-us__subtitle {
     text-align: center;
+    margin: 0 0 40px 0;
+    line-height: 40px;
   }
 }
 
@@ -1082,8 +1111,9 @@ input#slide-4:checked ~ .slide-arrow-next .slider-arrow-4 {
           transform: translate(0, -50%);
 }
 
-.arrow-prev:hover {
+.arrow-prev label:hover {
   background-color: #005fa3;
+  cursor: pointer;
 }
 
 @media (max-width: 1120px) {
@@ -1115,8 +1145,9 @@ input#slide-4:checked ~ .slide-arrow-next .slider-arrow-4 {
           transform: translate(0, -50%);
 }
 
-.arrow-next:hover {
+.arrow-next label:hover {
   background-color: #005fa3;
+  cursor: pointer;
 }
 
 @media (max-width: 1120px) {
@@ -1339,8 +1370,9 @@ input#btn-4:checked ~ .arrow-next .arrow-4 {
           transform: translate(0, -50%);
 }
 
-.rewiew-arrow-prev:hover {
+.rewiew-arrow-prev label:hover {
   background-color: #005fa3;
+  cursor: pointer;
 }
 
 @media (max-width: 1120px) {
@@ -1372,8 +1404,9 @@ input#btn-4:checked ~ .arrow-next .arrow-4 {
           transform: translate(0, -50%);
 }
 
-.rewiew-arrow-next:hover {
+.rewiew-arrow-next label:hover {
   background-color: #005fa3;
+  cursor: pointer;
 }
 
 @media (max-width: 1120px) {
@@ -1437,7 +1470,7 @@ input#rew-inp-4:checked ~ .rewiew-arrow-next .arrow-4 {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding-left: 50px;
+    padding: 80px 0;
   }
 }
 
@@ -1451,10 +1484,32 @@ input#rew-inp-4:checked ~ .rewiew-arrow-next .arrow-4 {
   position: relative;
 }
 
+@media (max-width: 800px) {
+  .contact-us__contact-us {
+    margin-bottom: 60px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 77px 65px 32px;
+        grid-template-rows: 77px 65px 32px;
+    gap: 0px 0px;
+        grid-template-areas: "contact-us__subtitle contact-us__subtitle" "contact-us__text contact-us__text" "contact-us__phone contact-us__mail";
+  }
+}
+
 .contact-us__subtitle {
   line-height: 47px;
   color: #ffffff;
   margin-bottom: 60px;
+}
+
+@media (max-width: 800px) {
+  .contact-us__subtitle {
+    grid-area: contact-us__subtitle;
+    text-align: center;
+    margin-bottom: 30px;
+  }
 }
 
 .contact-us__text {
@@ -1462,6 +1517,15 @@ input#rew-inp-4:checked ~ .rewiew-arrow-next .arrow-4 {
   color: #ffffff;
   margin-bottom: 80px;
   font-weight: 300;
+}
+
+@media (max-width: 800px) {
+  .contact-us__text {
+    grid-area: contact-us__text;
+    text-align: center;
+    max-width: 100%;
+    margin-bottom: 40px;
+  }
 }
 
 .contact-us__phone {
@@ -1472,12 +1536,25 @@ input#rew-inp-4:checked ~ .rewiew-arrow-next .arrow-4 {
   text-align: center;
 }
 
+@media (max-width: 800px) {
+  .contact-us__phone {
+    margin: 0;
+    text-align: start;
+    grid-area: contact-us__phone;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+}
+
 .contact-us__phone a {
   font-family: Lato;
   font-style: normal;
   font-weight: 300;
   font-size: 21px;
-  line-height: 29px;
+  line-height: 32px;
   color: #ffffff;
 }
 
@@ -1486,6 +1563,18 @@ input#rew-inp-4:checked ~ .rewiew-arrow-next .arrow-4 {
   padding-left: 53px;
   background: url(/img/mail-white.svg) 0 0 no-repeat;
   text-align: center;
+}
+
+@media (max-width: 800px) {
+  .contact-us__mail {
+    grid-area: contact-us__mail;
+    text-align: start;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
 }
 
 .contact-us__mail a {
@@ -1502,6 +1591,19 @@ input#rew-inp-4:checked ~ .rewiew-arrow-next .arrow-4 {
   position: relative;
 }
 
+@media (max-width: 800px) {
+  .contact-us__form {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 73px 200px 60px;
+        grid-template-rows: 73px 200px 60px;
+    gap: 0px 0px;
+        grid-template-areas: "form__name form__surname" "form__text form__text" "form__button form__button";
+  }
+}
+
 @media (max-width: 600px) {
   .contact-us__form {
     padding: 20px 0;
@@ -1513,24 +1615,16 @@ input#rew-inp-4:checked ~ .rewiew-arrow-next .arrow-4 {
   margin-right: 30px;
 }
 
-.form__name :focus::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.form__name :focus::-moz-placeholder {
-  color: transparent;
-}
-
-.form__name :focus:-moz-placeholder {
-  color: transparent;
-}
-
-.form__name :focus:-ms-input-placeholder {
-  color: transparent;
-}
-
-.form__name :hover {
-  background-color: rgba(255, 255, 255, 0.1);
+@media (max-width: 800px) {
+  .form__name {
+    grid-area: form__name;
+    margin-right: 15px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    -ms-grid-column-align: end;
+        justify-self: end;
+  }
 }
 
 .form__name ::-webkit-input-placeholder {
@@ -1584,10 +1678,27 @@ input#rew-inp-4:checked ~ .rewiew-arrow-next .arrow-4 {
   min-height: 36px;
   background-color: transparent;
   border-bottom: 1px solid #ffffff;
+  color: white;
+  font-size: 20px;
+}
+
+.form__name input:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .form__surname {
   display: inline-block;
+}
+
+@media (max-width: 800px) {
+  .form__surname {
+    grid-area: form__surname;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    -ms-grid-column-align: start;
+        justify-self: start;
+  }
 }
 
 .form__surname ::-webkit-input-placeholder {
@@ -1626,26 +1737,6 @@ input#rew-inp-4:checked ~ .rewiew-arrow-next .arrow-4 {
   color: #bdbdbd;
 }
 
-.form__surname :focus::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.form__surname :focus::-moz-placeholder {
-  color: transparent;
-}
-
-.form__surname :focus:-moz-placeholder {
-  color: transparent;
-}
-
-.form__surname :focus:-ms-input-placeholder {
-  color: transparent;
-}
-
-.form__surname :hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
 .form__surname div {
   font-family: Lato;
   font-style: normal;
@@ -1661,10 +1752,27 @@ input#rew-inp-4:checked ~ .rewiew-arrow-next .arrow-4 {
   border-bottom: 1px solid #ffffff;
   min-width: 255px;
   min-height: 36px;
+  color: white;
+  font-size: 20px;
+}
+
+.form__surname input :hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .form__text {
   margin: 35px 0 50px 0;
+}
+
+@media (max-width: 800px) {
+  .form__text {
+    grid-area: form__text;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
 }
 
 .form__text ::-webkit-input-placeholder {
@@ -1703,30 +1811,15 @@ input#rew-inp-4:checked ~ .rewiew-arrow-next .arrow-4 {
   color: #bdbdbd;
 }
 
-.form__text :focus::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.form__text :focus::-moz-placeholder {
-  color: transparent;
-}
-
-.form__text :focus:-moz-placeholder {
-  color: transparent;
-}
-
-.form__text :focus:-ms-input-placeholder {
-  color: transparent;
-}
-
-.form__text :hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
 .form__text textarea {
   background-color: transparent;
   border-bottom: 1px solid #ffffff;
   resize: none;
+  color: white;
+}
+
+.form__text textarea :hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .form__text div {
@@ -1742,6 +1835,13 @@ input#rew-inp-4:checked ~ .rewiew-arrow-next .arrow-4 {
 .form__button {
   position: relative;
   left: 50%;
+}
+
+@media (max-width: 800px) {
+  .form__button {
+    grid-area: form__button;
+    left: 30%;
+  }
 }
 
 .footer {
