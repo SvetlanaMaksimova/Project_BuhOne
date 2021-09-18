@@ -478,7 +478,7 @@ h6 {
 
 @media (max-width: 800px) {
   .first-slider__slider {
-    padding: 100px 0 50px 0;
+    padding: 50px 0;
     grid-auto-columns: 1fr;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
@@ -533,6 +533,7 @@ h6 {
     display: inline-block;
     font-size: 36px;
     text-align: center;
+    padding: 0 0 30px 0;
   }
 }
 
@@ -729,6 +730,12 @@ input#slide-4:checked ~ .slide-arrow-next .slider-arrow-4 {
   }
 }
 
+@media (max-width: 600px) {
+  .our-services__title {
+    padding: 20px 0 0 0;
+  }
+}
+
 .our-services__subtitle {
   padding: 40px 0 70px 0;
 }
@@ -744,6 +751,12 @@ input#slide-4:checked ~ .slide-arrow-next .slider-arrow-4 {
   .our-services__subtitle {
     text-align: center;
     padding: 30px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .our-services__subtitle {
+    padding: 0 0 15px 0;
   }
 }
 
@@ -864,7 +877,7 @@ input#slide-4:checked ~ .slide-arrow-next .slider-arrow-4 {
   padding: 140px 0;
 }
 
-@media (max-width: 880px) {
+@media (max-width: 890px) {
   .about-us {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -874,11 +887,13 @@ input#slide-4:checked ~ .slide-arrow-next .slider-arrow-4 {
   }
 }
 
-.about-us__text {
-  max-width: 445px;
+@media (max-width: 600px) {
+  .about-us {
+    padding: 15px 0;
+  }
 }
 
-@media (max-width: 880px) {
+@media (max-width: 890px) {
   .about-us__text {
     max-width: 95%;
     margin: 0 auto;
@@ -899,11 +914,11 @@ input#slide-4:checked ~ .slide-arrow-next .slider-arrow-4 {
   max-width: 540px;
 }
 
-.about-us__cases :nth-child(-n + 2) {
-  margin: 0 0 30px 0;
+.about-us__cases :nth-child(-n + 3) {
+  margin: 0 1px 30px 0;
 }
 
-@media (max-width: 1120px) {
+@media (max-width: 890px) {
   .about-us__cases {
     margin: 0 auto;
   }
@@ -930,10 +945,16 @@ input#slide-4:checked ~ .slide-arrow-next .slider-arrow-4 {
   margin: 0 0 45px 0;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 890px) {
   .about-us__title {
     text-align: center;
     margin: 0 0 30px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-us__title {
+    margin: 0 0 15px 0;
   }
 }
 
@@ -941,11 +962,29 @@ input#slide-4:checked ~ .slide-arrow-next .slider-arrow-4 {
   margin: 0 0 60px 0;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 890px) {
   .about-us__subtitle {
     text-align: center;
     margin: 0 0 40px 0;
     line-height: 40px;
+  }
+}
+
+.about-us__text-text {
+  max-width: 445px;
+}
+
+@media (max-width: 890px) {
+  .about-us__text-text {
+    max-width: 85%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-us__text-text {
+    max-width: 95%;
+    margin: 0 auto;
   }
 }
 
@@ -1024,7 +1063,7 @@ input#slide-4:checked ~ .slide-arrow-next .slider-arrow-4 {
 @media (max-width: 800px) {
   .our-clients__subtitle {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
 }
 
@@ -1058,6 +1097,12 @@ input#slide-4:checked ~ .slide-arrow-next .slider-arrow-4 {
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-area: our-clients__slides;
+}
+
+@media (max-width: 800px) {
+  .our-clients__slides {
+    margin-bottom: 20px;
+  }
 }
 
 .our-clients__slide {
@@ -1240,6 +1285,7 @@ input#btn-4:checked ~ .arrow-next .arrow-4 {
 @media (max-width: 800px) {
   .reviews__title {
     text-align: center;
+    margin-bottom: 30px;
   }
 }
 
@@ -1251,6 +1297,7 @@ input#btn-4:checked ~ .arrow-next .arrow-4 {
 @media (max-width: 800px) {
   .reviews__subtitle {
     text-align: center;
+    margin-bottom: 40px;
   }
 }
 
@@ -1289,11 +1336,23 @@ input#btn-4:checked ~ .arrow-next .arrow-4 {
   padding: 45px 95px;
 }
 
+@media (max-width: 800px) {
+  .reviews__slide {
+    padding: 40px;
+  }
+}
+
 .info-client {
   margin-top: 58px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media (max-width: 800px) {
+  .info-client {
+    margin-top: 30px;
+  }
 }
 
 .info-client__photo {
@@ -1686,6 +1745,10 @@ input#rew-inp-4:checked ~ .rewiew-arrow-next .arrow-4 {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
+.form__name input:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
 .form__surname {
   display: inline-block;
 }
@@ -1756,7 +1819,11 @@ input#rew-inp-4:checked ~ .rewiew-arrow-next .arrow-4 {
   font-size: 20px;
 }
 
-.form__surname input :hover {
+.form__surname input:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.form__surname input:focus {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
@@ -1818,7 +1885,11 @@ input#rew-inp-4:checked ~ .rewiew-arrow-next .arrow-4 {
   color: white;
 }
 
-.form__text textarea :hover {
+.form__text textarea:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.form__text textarea:focus {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
