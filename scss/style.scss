@@ -152,7 +152,7 @@
             z-index: 8;
         }
         @media (max-width: 600px) {
-            //min-width: 100%;
+            min-width: 100%;
         }
     }
 
@@ -165,7 +165,6 @@
             position: absolute;
             background-color: rgb(255, 255, 255);
             right: -2rem;
-            //padding-top: 1em;
             min-width: 50vw;
             min-height: 700px;
             opacity: 0;

@@ -273,6 +273,12 @@ h6 {
   }
 }
 
+@media (max-width: 600px) {
+  .menu__info {
+    min-width: 100%;
+  }
+}
+
 .menu__body {
   display: -webkit-box;
   display: -ms-flexbox;
